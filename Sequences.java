@@ -85,4 +85,57 @@ public class Sequences {
         }
         return result;
     }
+
+    public int sumOfSquares(int n) {
+        int result = 0;
+        if (n <= 0) {
+            return 0;
+        }
+        for (int i = 0; i <= n; i++) {
+            result += i * i;
+        }
+        return result;
+    }
+
+    public int alternatingSum(int n) {
+        int result = 0;
+        if (n <= 0) {
+            return 0;
+        }
+        for (int i = 0; i <= n; i++) {
+            if (i % 2 == 0) {
+                result -= i;
+            } else {
+                result += i;
+            }
+        }
+        return result;
+    }
+
+    public String powersOfTwo(int count) {
+        String result = "";
+        int power = 1;
+        if (count <= 0) {
+            return "";
+        }
+        for (int i = 1; i < count; i++) {
+            if (result.length() > 0) {
+                result += " ";
+            }
+            result += power;
+            power *= 2;
+        }
+        return result;
+    }
+
+    public String anyStep(int start, int limit, int step) {
+        String result = "";
+        for (int i = start; i < limit; i += step) {
+            if (result.length() > 0) {
+                result += " ";
+            }
+            result += i;
+        }
+        return result;
+    }
 }
