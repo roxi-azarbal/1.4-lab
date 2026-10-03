@@ -115,10 +115,12 @@ public class Sequences {
     public String powersOfTwo(int count) {
         String result = "";
         int power = 1;
+
         if (count <= 0) {
             return "";
         }
-        for (int i = 1; i < count; i++) {
+
+        for (int i = 0; i < count; i++) {
             if (result.length() > 0) {
                 result += " ";
             }
@@ -128,9 +130,9 @@ public class Sequences {
         return result;
     }
 
-    public String anyStep(int start, int limit, int step) {
+    public String countBy(int start, int limit, int step) {
         String result = "";
-        for (int i = start; i < limit; i += step) {
+        for (int i = start; i <= limit; i += step) {
             if (result.length() > 0) {
                 result += " ";
             }
